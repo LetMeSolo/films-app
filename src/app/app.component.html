@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="container_header">
+    <div class="logo">
+      <p><a id="refKinoPoisk" href=""><span class="yellow">Кино</span>Поиск <span class="yellow">v</span>2<span class="yellow">.0</span></a></p>
+      <img src="../assets/images/icon.png" alt="">
+    </div>
+
+    <div class="container_form">
+      <mat-form-field class="input_title" appearance="fill">
+        <mat-label>Enter movie title</mat-label>
+        <input matInput placeholder="for example matrix" [(ngModel)]="inputValue">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="select_type">
+        <mat-label>Type</mat-label>
+        <select matNativeControl required [(ngModel)]="selectValue">
+          <option *ngFor="let select of typeSelect">{{select.viewValue}}</option>
+        </select>
+      </mat-form-field>
+      <button mat-stroked-button (click)="getFilms()">Search films</button>
+    </div>
+  </div>
+
+  <div class="container_films_list">
+    <app-film-item [filmArray]="filmArray"></app-film-item>
+  </div>
+
+  <div class="container_description">
+    <app-film-description [filmDescription]="filmDescription"></app-film-description>
+    <button (click)="getDiscription()">get discription</button>
+  </div>
+
+</div>

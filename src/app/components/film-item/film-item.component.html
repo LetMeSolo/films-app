@@ -1,0 +1,11 @@
+<div class="container_films">
+  <div class="container__inner" *ngFor="let film of filmArray">
+    <img class="filmPoster" [src]="film.Poster" alt="poster">
+    <div class="container__title">
+      <span class="filmType">{{film.Type}}</span>
+      <h4 class="filmName">{{film.Title}}</h4>
+      <span class="filmYear">year of issue: {{film.Year}}</span>
+      <button id="btn_details" class="btn__green" data-id="{{film.imdbID}}">{{film.imdbID}}</button>
+    </div>
+  </div>
+</div>

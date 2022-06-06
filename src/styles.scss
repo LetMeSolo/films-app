@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  margin: 0;
+
+  background-color: #424242;
+  background-image: url(assets/images/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: black;
+}
+
+body {
+  margin: 0 auto;
+  min-height: 90vh;
+  width: 95vw;
+
+  font-family: Titillium Web, serif;
+  color: #f0f0f0;
+
+  overflow-x:  hidden;
+}
