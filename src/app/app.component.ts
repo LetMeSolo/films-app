@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FilmsService} from "./shared/service/films.service";
-import {IFilm, IFilmItem, IFilmPreview, IFilmsResponse, IType} from "./shared/model/films-app.module";
+import {IFilm, IFilmPreview, IFilmsResponse, IType} from "./shared/model/films-app.module";
 
 @Component({
   selector: 'app-root',
@@ -26,7 +26,8 @@ export class AppComponent implements OnInit {
   filmsResponse!: IFilmsResponse;
   filmArray: IFilmPreview[] = [];
 
-  filmDescription: IFilm[] = [];
+  filmDescription!: IFilm;
+  isDescriptionVisible: boolean = true;
 
   constructor(private filmsService: FilmsService) { }
 
@@ -50,14 +51,15 @@ export class AppComponent implements OnInit {
     }
   }
 
-  getDiscription() {
-    this.filmsService.getDescriptionFilmById().subscribe((filmDescription: IFilm[]) => {
+  getDiscription(imdbID: string) {
+    this.filmsService.getDescriptionFilmById(imdbID).subscribe((filmDescription: IFilm) => {
       this.filmDescription = filmDescription;
-      console.log(filmDescription);
     });
+    this.isDescriptionVisible = true;
   }
 
-
-
+  closeDescription() {
+    this.isDescriptionVisible = false;
+  }
 
 }

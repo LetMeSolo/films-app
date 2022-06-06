@@ -19,6 +19,8 @@
   width: 100%;
   min-height: 100%;
 
+  position: relative;
+
   .container_header {
     width: 100%;
     margin: 20px auto;
@@ -97,6 +99,38 @@
       #refKinoPoisk {
         text-decoration: none;
         color: #f0f0f0;
+      }
+    }
+  }
+
+  .container_films_list{
+
+    margin: 0 auto;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container_description {
+    position: fixed;
+    left: 20%;
+    top: 25%;
+
+    z-index: 10000;
+
+    img {
+      position: absolute;
+      left: 95%;
+      top: 4%;
+
+      background-color: yellow;
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
       }
     }
   }

@@ -1,29 +1,29 @@
-<div class="container__details" *ngFor="let description of filmDescription">
-  <img [src]="description.Poster" alt="poster">
-  <div class="inner__datails">
+<div class="container__details">
+  <img [src]="filmDescription.Poster" alt="poster">
+  <div class="inner__details">
     <div class="inner_item">
-      <p>Title:</p><p>{{description.Title}}</p>
+      <p>Title:</p><p>{{filmDescription.Title}}</p>
     </div>
     <div class="inner_item">
-      <p>Released:</p><p>{{description.Released}}</p>
+      <p>Released:</p><p>{{filmDescription.Released}}</p>
     </div>
     <div class="inner_item">
-      <p>Genre:</p><p>{{description.Genre}}</p>
+      <p>Genre:</p><p>{{filmDescription.Genre}}</p>
     </div>
     <div class="inner_item">
-      <p>Coutry:</p><p>{{description.Country}}</p>
+      <p>Coutry:</p><p>{{filmDescription.Country}}</p>
     </div>
     <div class="inner_item">
-      <p>Director:</p><p>{{description.Director}}</p>
+      <p>Director:</p><p>{{filmDescription.Director}}</p>
     </div>
     <div class="inner_item">
-      <p>Writer:</p><p>{{description.Writer}}</p>
+      <p>Writer:</p><p>{{filmDescription.Writer}}</p>
     </div>
     <div class="inner_item">
-      <p>Actors:</p><p>{{description.Actors}}</p>
+      <p>Actors:</p><p>{{filmDescription.Actors}}</p>
     </div>
     <div class="inner_item">
-      <p>Awards:</p><p>{{description.Awards}}</p>
+      <p>Awards:</p><p>{{filmDescription.Awards}}</p>
     </div>
   </div>
 </div>

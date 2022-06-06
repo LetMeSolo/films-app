@@ -1,11 +1,9 @@
-<div class="container_films">
-  <div class="container__inner" *ngFor="let film of filmArray">
-    <img class="filmPoster" [src]="film.Poster" alt="poster">
-    <div class="container__title">
-      <span class="filmType">{{film.Type}}</span>
-      <h4 class="filmName">{{film.Title}}</h4>
-      <span class="filmYear">year of issue: {{film.Year}}</span>
-      <button id="btn_details" class="btn__green" data-id="{{film.imdbID}}">{{film.imdbID}}</button>
-    </div>
+<div class="container__inner">
+  <img class="filmPoster" src="{{filmArray.Poster}}" alt="poster">
+  <div class="container__title">
+    <span class="filmType">{{filmArray.Type}}</span>
+    <h4 class="filmName">{{filmArray.Title}}</h4>
+    <span class="filmYear">year of issue: {{filmArray.Year}}</span>
+    <button id="btn_details" class="btn__green" (click)="getDiscription(filmArray.imdbID)">details</button>
   </div>
 </div>

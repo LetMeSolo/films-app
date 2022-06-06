@@ -14,6 +14,7 @@ import { FormsModule } from "@angular/forms";
 import { MatSelectModule } from '@angular/material/select';
 import { FilmItemComponent } from './components/film-item/film-item.component';
 import { FilmDescriptionComponent } from './components/film-description/film-description.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FilmDescriptionComponent } from './components/film-description/film-des
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

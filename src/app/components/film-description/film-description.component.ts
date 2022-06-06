@@ -8,11 +8,13 @@ import {IFilm} from "../../shared/model/films-app.module";
 })
 export class FilmDescriptionComponent implements OnInit {
 
-  @Input() filmDescription!: IFilm[];
+  @Input() filmDescription!: IFilm;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }
